@@ -1,8 +1,8 @@
 class Karyawan:
     def __init__(self, nama):
         self.nama = nama
-        self.gaji_pokok = 3200000
-        self.uang_harian = 40000
+        self.gaji_pokok = 4000000
+        self.uang_harian = 30000
         self.absen = False
 
     def htg_gaji(self):
@@ -45,7 +45,7 @@ class Manajer(Karyawan):
 class Admin(Karyawan):
     def __init__(self, nama, jam_lembur=0):
         super().__init__(nama)
-        self.tarif_lembur = 50000
+        self.tarif_lembur = 40000
         self.jam_lembur = jam_lembur
 
     def hitung_gaji(self):
@@ -64,7 +64,7 @@ class Admin(Karyawan):
 class Pemasaran(Karyawan):
     def __init__(self, nama):
         super().__init__(nama)
-        self.uang_transport_harian = 100000
+        self.uang_transport_harian = 50000
 
     def htg_gaji(self):
         return self.gaji_pokok + self.uang_transport_harian
@@ -78,7 +78,7 @@ class Pemasaran(Karyawan):
 # Metode utama
 if __name__ == "__main__":
     manajer1 = Manajer("Rifky")
-    admin1 = Admin("Salwa", jam_lembur=4)
+    admin1 = Admin("Salwa", jam_lembur=2)
     pemasaran1 = Pemasaran("Adam")
 
     # Simulasi absen untuk Admin
